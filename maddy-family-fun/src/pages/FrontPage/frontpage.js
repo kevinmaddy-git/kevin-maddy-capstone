@@ -1,13 +1,14 @@
 import React from 'react';
 import Navbar from '../../components/Navbar/navbar';
+import Front from '../../components/Front/front'
 
-function Video() {
+const FrontPage = () => {
   return (
     <div>
       <Navbar />
-      <h1>Video Page</h1>
+      <Front />
     </div>
   );
-}
+};
 
-export default Video;
+export default FrontPage;

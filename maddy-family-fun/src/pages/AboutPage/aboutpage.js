@@ -1,13 +1,13 @@
 import React from 'react';
 import Navbar from '../../components/Navbar/navbar';
 
-function Video() {
+function About() {
   return (
     <div>
       <Navbar />
-      <h1>Video Page</h1>
+      <h1>About Page</h1>
     </div>
   );
 }
 
-export default Video;
+export default About;
