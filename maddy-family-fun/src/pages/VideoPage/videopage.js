@@ -1,15 +1,16 @@
 import React from 'react';
 import Navbar from '../../components/Navbar/navbar';
-import Footer from '../../components/Footer/footer'
+import Video from '../../components/Video/video'
+import Footer from '../../components/Footer/footer';
 
-function Video() {
+function videoPage() {
   return (
     <div>
       <Navbar />
-      <h1>Video Page</h1>
+      <Video />
       <Footer />
     </div>
   );
 }
 
-export default Video;
+export default videoPage;
