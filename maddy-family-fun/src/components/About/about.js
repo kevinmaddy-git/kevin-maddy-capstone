@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import "../About/about.scss";
 
 const About = () => {
   const [selectedPersonId, setSelectedPersonId] = useState(null);
@@ -35,12 +36,12 @@ const About = () => {
   };
 
   return (
-    <div>
-      <h2>About Us</h2>
-      <div className="names">
+    <div className="about">
+      <h2 className="about-title">About Us</h2>
+      <div className="about-names">
         <ul>
           {peopleData.map(person => (
-            <li key={person.id} onClick={() => handlePersonClick(person.id)}>
+            <li key={person.id} onClick={() => handlePersonClick(person.id)} className="about-name">
               {person.name}
             </li>
           ))}
@@ -48,9 +49,9 @@ const About = () => {
       </div>
       {selectedPerson && (
         <div className="selected-person">
-          <h3>{selectedPerson.name}</h3>
-          <p>{selectedPerson.image}</p>
-          <p>{selectedPerson.description}</p>
+          <h3 className="selected-person-name">{selectedPerson.name}</h3>
+          <img className="selected-person-image" src={selectedPerson.image} alt={selectedPerson.name} />
+          <p className="selected-person-description">{selectedPerson.description}</p>
         </div>
       )}
     </div>
