@@ -1,0 +1,35 @@
+@use "../../styles/partials/fonts.scss" as *;
+@use "../../styles/partials/mixins" as *;
+
+
+.front-container {
+    height: 50rem;
+    background-image: url(../../assets/images/Home_Mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    @include tablet {
+      height: 50rem;
+    background-image: url(../../assets/images/Home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    }
+  }
+  
+  .home-data {
+    
+  }
+  
+  .title {
+    
+  }
+  
+  .image {
+  
+  }
+  
+  .description {
+  }
+  

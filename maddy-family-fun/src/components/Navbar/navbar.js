@@ -7,7 +7,7 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="logo">
-                <video autoPlay muted>
+                <video autoPlay muted width={"200"} height={"200"}>
                     <source src={LogoVideo} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>

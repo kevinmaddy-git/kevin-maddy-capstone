@@ -1,0 +1,41 @@
+@use "../../styles/partials/fonts.scss" as *;
+@use "../../styles/partials/mixins" as *;
+
+* {
+    margin: 0;
+}
+
+.navbar {
+    height: 12.5rem;
+    display: flex;
+    flex-direction: row;
+    background-image: (url(../../assets/images/Header.jpg));
+    
+}
+.logo {
+    display: flex;
+    justify-content: left;
+}
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 2rem;
+    }
+}
+.nav-link {
+    display: flex;
+    font-size: 2.5rem;
+    justify-content: center;
+    font-family: "Bungee-Spice";
+    text-decoration: none;
+    margin-left: 4rem;
+    @include tablet {
+        justify-content: space-between;
+        flex-grow: 1;
+        margin-right: 10vw;
+    }
+}
