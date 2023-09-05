@@ -21,7 +21,7 @@ const Front = () => {
       {homeData ? (
         <div className="home-data">
           <h1 className="title">{homeData.title}</h1>
-          <p className="image">{homeData.image}</p>
+          <img className="image" src={homeData.image} alt={homeData.title} />
           <p className="description">{homeData.description}</p>
         </div>
       ) : (
@@ -32,4 +32,3 @@ const Front = () => {
 };
 
 export default Front;
-

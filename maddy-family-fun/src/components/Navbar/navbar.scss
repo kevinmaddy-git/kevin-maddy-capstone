@@ -34,8 +34,13 @@
     text-decoration: none;
     margin-left: 4rem;
     @include tablet {
-        justify-content: space-between;
         flex-grow: 1;
-        margin-right: 10vw;
+        margin-left: 4vw;
+        font-size: 1.8rem;
+    }
+    @include desktop {
+        margin-left: 10vw;
+        font-size: 2.5rem;
+        flex-grow: 1;
     }
 }
