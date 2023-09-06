@@ -1,0 +1,84 @@
+@use "../../styles/partials/fonts.scss" as *;
+@use "../../styles/partials/mixins" as *;
+
+* {
+    margin: 0;
+}
+
+.video {
+    background: url(../../assets/images/Video_Mobile.jpg);
+    @include tablet {
+        background: url(../../assets/images/Video.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+   
+    &-videos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+    }
+    &-item {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+  }
+  
+  .video-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include desktop {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    &-title{
+        font-family: "Bungee-Spice";
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        @include tablet {
+            font-size: 1.5rem;
+        }
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+    &-iframe {
+        border-radius: 1rem;
+        max-width: 30rem;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        @include tablet {
+            max-width: 40rem;
+        }
+        @include desktop {
+            width: 50rem;
+            margin: 2rem;
+        }
+
+    }
+    &-description {
+        font-family: "Bubblegum-Sans";
+        text-align: center;
+        padding: 1rem;
+        color: blue;
+        @include tablet {
+            font-size: 1.5rem;
+        }
+        @include desktop {
+            width: 30rem;
+            align-self: center;
+        }
+    }
+  }
+  
+  

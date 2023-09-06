@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './video.scss';
 
 const VideoPage = () => {
   const [videos, setVideos] = useState([]);
@@ -15,21 +16,21 @@ const VideoPage = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Video Page</h2>
-      <div className="videos">
+    <div className='video'>
+      <div className="video-videos">
         {videos.map(video => (
-          <div key={video.id} className="video">
-            <h3>{video.title}</h3>
+          <div key={video.id} className="video-item">
+            <h3 className="video-item-title">{video.title}</h3>
             <iframe
-              width="560"
-              height="315"
+              className="video-item-iframe"
+              width="600"
+              height="300"
               src={video.url}
               title={video.description}
               frameBorder={0}
               allowFullScreen
             ></iframe>
-            <p>{video.description}</p>
+            <p className="video-item-description">{video.description}</p>
           </div>
         ))}
       </div>
