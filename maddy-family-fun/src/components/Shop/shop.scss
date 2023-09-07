@@ -1,0 +1,166 @@
+@use "../../styles/partials/fonts.scss" as *;
+@use "../../styles/partials/mixins" as *;
+
+* {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+
+.shop {
+    background: url(../../assets/images/Shop.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cart {
+    border: 1px solid blue;
+    border-radius: 1rem;
+    padding: 1.3rem;
+    margin-top: 1.3rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    background: url(../../assets/images/Shop_Mobile.jpg);
+    text-align: center;
+    font-family: "Bubblegum-Sans";
+    margin: 0 auto;
+
+    &-total {
+        margin: 1.3rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & h3 {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        & p {
+            font-weight: bold;
+        }
+    }
+
+    & button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+
+        & img {
+            width: 40px;
+            height: auto;
+            margin-left: 16rem;
+
+        }
+    }
+
+    &-summary {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        color: #0056b3;
+        justify-content: right;
+        padding: 2rem;
+    }
+
+    & h2 {
+        font-size: 1.2rem;
+        margin: 0 0 10px 0;
+        font-family: "Bungee-Spice";
+    }
+
+    &-item {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+
+        &-details {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+
+            & h3 {
+                font-size: 1rem;
+                margin: 0;
+            }
+
+            & p {
+                font-size: 0.9rem;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.pay-button {
+    font-family: "Bubblegum-Sans";
+    color: red; 
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: -2.6rem;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    text-align: center; 
+    text-transform: uppercase; 
+    transition: background-color 0.3s ease-in-out; 
+  }
+  
+  .pay-button:hover {
+    background-color: #0056b3; 
+  }
+  
+
+
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.3rem;
+    justify-content: space-evenly;
+    margin-top: 1.3rem;
+    padding-bottom: 1.3rem;
+    font-family: "Bubblegum-Sans";
+}
+
+.item {
+    text-align: center;
+    border: .1rem solid blue;
+    border-radius: 1rem;
+    padding: .8rem;
+    background-color: #0056b3;
+    max-width: 200px;
+
+    & h3 {
+        font-size: 1rem;
+        margin: .6rem 0;
+    }
+
+    & img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    & p {
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    & button {
+        background-color: #007bff;
+        color: orange;
+        border: none;
+        border-radius: 1rem;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 0.9rem;
+
+        &:hover {
+            background-color: green;
+        }
+    }
+}

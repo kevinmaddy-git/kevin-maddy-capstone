@@ -1,0 +1,25 @@
+@use "../../styles/partials/fonts.scss" as *;
+@use "../../styles/partials/mixins" as *;
+
+* {
+    margin: 0;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-image: url(../../assets/images/Footer.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #dbf20c;
+    height: 16rem;
+    margin: 0;
+
+    &-content {
+        font-family: "Bungee-Spice";
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+}
