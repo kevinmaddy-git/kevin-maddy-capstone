@@ -1,6 +1,7 @@
-// Import font and mixins partials
+// Import partials
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 
 // Reset margins for all elements
 * {
@@ -33,7 +34,7 @@
     padding-top: 2rem;
     display: flex;
     justify-content: center;
-    color: blue;
+    color: $family-fun-blue;
   }
 
   // Styling for the list of names
@@ -48,14 +49,14 @@
       // Styling for individual names
       .about-name {
         cursor: pointer;
-        color: orangered;
+        color: $family-fun-orange;
         font-size: 1.5rem;
         margin: 0.5rem 0;
         transition: color 0.3s;
 
         // Hover effect for names
         &:hover {
-          color: #007bff;
+          color: $color-hover-blue;
         }
       }
     }
@@ -72,7 +73,7 @@
     &-name {
       font-size: 2rem;
       margin-bottom: 1rem;
-      color: orange;
+      color: $family-fun-orangered;
 
       // Animation for name rotation
       animation: rotateName 0.5s ease-in 1;
@@ -116,7 +117,7 @@
     &-description {
       font-size: 1.3rem;
       margin: 1rem 2rem;
-      color: purple;
+      color: $family-fun-purple;
 
       // Media query for tablet and desktop screens
       @include tablet {

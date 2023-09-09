@@ -1,6 +1,7 @@
-// Import fonts and mixins
+// Import partials
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 
 // Reset margins for all elements and remove text decoration for anchor elements
 * {
@@ -20,7 +21,7 @@ a {
 
 // Styles for the shopping cart
 .cart {
-    border: 1px solid blue;
+    border: 1px solid $family-fun-blue;
     border-radius: 1rem;
     padding: 1.3rem;
     margin-top: 1.3rem;
@@ -56,7 +57,7 @@ a {
         display: flex;
 
         & img {
-            width: 40px;
+            width: 3.5rem;
             height: auto;
             margin-left: 16rem;
         }
@@ -67,7 +68,7 @@ a {
         cursor: pointer;
         display: flex;
         align-items: center;
-        color: #0056b3;
+        color: $color-button-blue;
         justify-content: right;
         padding: 2rem;
     }
@@ -106,7 +107,7 @@ a {
 // Styles for the payment button
 .pay-button {
     font-family: "Bubblegum-Sans";
-    color: red;
+    color: $color-pay-red;
     border: none;
     border-radius: 1rem;
     cursor: pointer;
@@ -122,7 +123,7 @@ a {
 
 // Hover effect for the payment button
 .pay-button:hover {
-    background-color: #0056b3;
+    background-color: $color-hover-blue;
 }
 
 // Styles for the shop items container
@@ -139,10 +140,10 @@ a {
 // Styles for individual shop items
 .item {
     text-align: center;
-    border: .1rem solid blue;
+    border: .1rem solid $family-fun-blue;
     border-radius: 1rem;
     padding: .8rem;
-    background-color: #0056b3;
+    background-color: $color-button-blue;
     max-width: 200px;
 
     & h3 {
@@ -162,7 +163,7 @@ a {
 
     // Styles for the "Add to Cart" button
     & button {
-        background-color: #007bff;
+        background-color: $color-button-blue;
         font-family: "Bungee-Spice";
         border: none;
         border-radius: 1rem;
@@ -172,7 +173,7 @@ a {
 
         // Hover effect for the "Add to Cart" button
         &:hover {
-            background-color: green;
+            background-color: $family-fun-green;
         }
     }
 }

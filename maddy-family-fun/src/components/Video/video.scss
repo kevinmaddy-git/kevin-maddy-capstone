@@ -1,6 +1,7 @@
-// Import font and mixin styles
+// Import partials
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 
 // Apply styles to all elements
 * {
@@ -94,7 +95,7 @@
         font-family: "Bubblegum-Sans";
         text-align: center;
         padding: 1rem;
-        color: blue;
+        color: $family-fun-blue;
 
         // Media query for tablets
         @include tablet {

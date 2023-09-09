@@ -1,6 +1,7 @@
-// Import font and mixins partials
+// Import partials
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 
 // Define global styles for all elements
 * {
@@ -28,7 +29,7 @@
         // Add hover styles to all links within .nav-links
         & :hover {
             text-decoration: underline;
-            color: yellow;
+            color: $color-underline-yellow;
         }
         
         // Media query for tablet screens

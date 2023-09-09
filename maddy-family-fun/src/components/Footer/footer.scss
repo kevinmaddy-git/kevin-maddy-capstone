@@ -1,6 +1,7 @@
-// Import font and mixins partials
+// Import partials
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 
 // Reset margins for all elements
 * {
