@@ -29,6 +29,7 @@
 .title {
   font-size: 4rem;
   margin: 1rem 0;
+  color: orange;
 }
 
 .image {
@@ -36,11 +37,22 @@
   background-position: center;
   margin-bottom: 1rem;
   max-height: 31rem;
+  animation: rotateImage .5s ease-in 1;
+  transform-origin: center;
+  @keyframes rotateImage {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 }
 
 .description {
   margin: 0 2rem;
   font-size: 1rem;
+  color: purple;
   @include tablet {
     font-size: .95rem;
   }

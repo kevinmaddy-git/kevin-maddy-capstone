@@ -19,6 +19,10 @@
 .nav-links {
     display: flex;
     flex-direction: column;
+    & :hover {
+        text-decoration: underline;
+        color: yellow;
+    }
     @include tablet {
         flex-direction: row;
         justify-content: space-between;

@@ -25,12 +25,6 @@ const Shop = () => {
     setCart([...cart, { ...item, price: parsedPrice }]);
   };
 
-
-  const removeFromCart = (itemId) => {
-    const updatedCart = cart.filter((item) => item.id !== itemId);
-    setCart(updatedCart);
-  };
-
   const clearCart = () => {
     setCart([]);
   };

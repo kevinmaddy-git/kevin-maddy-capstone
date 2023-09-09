@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import "../About/about.scss";
+import '../About/about.scss';
 
 const About = () => {
   const [selectedPersonId, setSelectedPersonId] = useState(null);
@@ -8,7 +8,8 @@ const About = () => {
   const [selectedPerson, setSelectedPerson] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:8090/about')
+    axios
+      .get('http://localhost:8090/about')
       .then(response => {
         setPeopleData(response.data);
       })
@@ -19,7 +20,8 @@ const About = () => {
 
   useEffect(() => {
     if (selectedPersonId !== null) {
-      axios.get(`http://localhost:8090/about/${selectedPersonId}`)
+      axios
+        .get(`http://localhost:8090/about/${selectedPersonId}`)
         .then(response => {
           setSelectedPerson(response.data);
         })
@@ -31,7 +33,7 @@ const About = () => {
     }
   }, [selectedPersonId]);
 
-  const handlePersonClick = (id) => {
+  const handlePersonClick = id => {
     setSelectedPersonId(id);
   };
 
@@ -41,16 +43,25 @@ const About = () => {
       <div className="about-names">
         <ul>
           {peopleData.map(person => (
-            <li key={person.id} onClick={() => handlePersonClick(person.id)} className="about-name">
+            <li
+              key={person.id}
+              onClick={() => handlePersonClick(person.id)}
+              className="about-name"
+            >
               {person.name}
             </li>
           ))}
         </ul>
       </div>
       {selectedPerson && (
-        <div className="selected-person">
+        <div className="selected-person" key={selectedPerson.id}> 
           <h3 className="selected-person-name">{selectedPerson.name}</h3>
-          <img className="selected-person-image" src={selectedPerson.image} alt={selectedPerson.name} />
+          <img
+            className="selected-person-image"
+            src={selectedPerson.image}
+            alt={selectedPerson.name}
+            key={selectedPerson.id}
+          />
           <p className="selected-person-description">{selectedPerson.description}</p>
         </div>
       )}
@@ -59,3 +70,4 @@ const About = () => {
 };
 
 export default About;
+

@@ -5,7 +5,7 @@
     margin: 0;
 }
 
-.about { 
+.about {
     height: 60rem;
     background-image: url(../../assets/images/About_Mobile.jpg);
     background-repeat: no-repeat;
@@ -13,13 +13,13 @@
     background-position: center;
     background-attachment: fixed;
     font-family: "Bubblegum-Sans";
-  
+
     @include tablet {
-      height: 60rem;
-      background-image: url(../../assets/images/About.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
+        height: 60rem;
+        background-image: url(../../assets/images/About.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
     }
 
     &-title {
@@ -53,7 +53,7 @@
         }
     }
 
-.selected-person {
+    .selected-person {
         margin-top: 2rem;
         display: flex;
         flex-direction: column;
@@ -63,6 +63,18 @@
             font-size: 2rem;
             margin-bottom: 1rem;
             color: orange;
+            animation: rotateName .5s ease-in 1;
+            transform-origin: center;
+
+            @keyframes rotateName {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
         }
 
         &-image {
@@ -71,19 +83,33 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             margin-bottom: 1rem;
+            animation: rotateImage .5s ease-in 1;
+            transform-origin: center;
+
+            @keyframes rotateImage {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(-360deg);
+                }
+            }
         }
 
-        &-description {
-            font-size: 1.2rem;
-            margin: 1rem 2rem;
-            color: purple;
-            @include tablet {
-                font-size: 1.5rem;
-            }
-            @include desktop {
-                font-size: 2rem;
-            }
+    &-description {
+        font-size: 1.3rem;
+        margin: 1rem 2rem;
+        color: purple;
+        transition: opacity 3s ease-in;
+
+        @include tablet {
+            font-size: 1.5rem;
+        }
+
+        @include desktop {
+            font-size: 2rem;
         }
     }
 }
-
+}
