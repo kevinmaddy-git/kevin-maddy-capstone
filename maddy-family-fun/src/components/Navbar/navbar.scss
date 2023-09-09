@@ -1,46 +1,66 @@
+// Import font and mixins partials
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/mixins" as *;
 
+// Define global styles for all elements
 * {
     margin: 0;
 }
 
+// Define styles for the .navbar class
 .navbar {
     height: 12.5rem;
     display: flex;
     flex-direction: row;
-    background-image: (url(../../assets/images/Header.jpg));
+    background-image: (url(../../assets/images/Header.jpg)); // Set the background image
     
-}
-.logo {
-    display: flex;
-    justify-content: left;
-}
-.nav-links {
-    display: flex;
-    flex-direction: column;
-    @include tablet {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-right: 2rem;
+    // Define styles for the .logo class
+    .logo {
+        display: flex;
+        justify-content: left;
     }
-}
-.nav-link {
-    display: flex;
-    font-size: 2.5rem;
-    justify-content: center;
-    font-family: "Bungee-Spice";
-    text-decoration: none;
-    margin-left: 4rem;
-    @include tablet {
-        flex-grow: 1;
-        margin-left: 4vw;
-        font-size: 1.8rem;
+
+    // Define styles for the .nav-links class
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        
+        // Add hover styles to all links within .nav-links
+        & :hover {
+            text-decoration: underline;
+            color: yellow;
+        }
+        
+        // Media query for tablet screens
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 2rem;
+        }
     }
-    @include desktop {
-        margin-left: 10vw;
+    
+    // Define styles for the .nav-link class
+    .nav-link {
+        display: flex;
         font-size: 2.5rem;
-        flex-grow: 1;
+        justify-content: center;
+        font-family: "Bungee-Spice";
+        text-decoration: none;
+        margin-left: 4rem;
+        
+        // Media query for tablet screens
+        @include tablet {
+            flex-grow: 1;
+            margin-left: 4vw;
+            font-size: 1.8rem;
+        }
+        
+        // Media query for desktop screens
+        @include desktop {
+            margin-left: 10vw;
+            font-size: 2.5rem;
+            flex-grow: 1;
+        }
     }
 }

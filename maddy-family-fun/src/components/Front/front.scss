@@ -1,7 +1,8 @@
+// Import font and mixins partials
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/mixins" as *;
 
-
+// Define styles for the .front-container class
 .front-container {
   height: 50rem;
   background-image: url(../../assets/images/Home_Mobile.jpg);
@@ -10,6 +11,7 @@
   background-position: center;
   background-attachment: fixed;
 
+  // Media query for tablet screens
   @include tablet {
     height: 50rem;
     background-image: url(../../assets/images/Home.jpg);
@@ -19,6 +21,7 @@
   }
 }
 
+// Define styles for the .home-data class
 .home-data {
   display: flex;
   flex-direction: column;
@@ -26,24 +29,45 @@
   font-family: "Bubblegum-Sans";
 }
 
+// Define styles for the .title class
 .title {
   font-size: 4rem;
   margin: 1rem 0;
+  color: orange;
 }
 
+// Define styles for the .image class
 .image {
   max-width: 75vw;
   background-position: center;
   margin-bottom: 1rem;
   max-height: 31rem;
+  animation: rotateImage 0.5s ease-in 1;
+  transform-origin: center;
+
+  // Keyframes animation for image rotation
+  @keyframes rotateImage {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 }
 
+// Define styles for the .description class
 .description {
   margin: 0 2rem;
   font-size: 1rem;
+  color: purple;
+
+  // Media query for tablet screens
   @include tablet {
-    font-size: .95rem;
+    font-size: 0.95rem;
   }
+
+  // Media query for desktop screens
   @include desktop {
     font-size: 1rem;
   }

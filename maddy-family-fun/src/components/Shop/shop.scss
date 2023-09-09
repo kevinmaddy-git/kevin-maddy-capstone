@@ -1,6 +1,8 @@
+// Import fonts and mixins
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/mixins" as *;
 
+// Reset margins for all elements and remove text decoration for anchor elements
 * {
     margin: 0;
 }
@@ -8,6 +10,7 @@ a {
     text-decoration: none;
 }
 
+// Styles for the main shop container
 .shop {
     background: url(../../assets/images/Shop.jpg);
     background-position: center;
@@ -15,6 +18,7 @@ a {
     background-size: cover;
 }
 
+// Styles for the shopping cart
 .cart {
     border: 1px solid blue;
     border-radius: 1rem;
@@ -27,6 +31,7 @@ a {
     font-family: "Bubblegum-Sans";
     margin: 0 auto;
 
+    // Styles for the total price section within the cart
     &-total {
         margin: 1.3rem 0;
         display: flex;
@@ -43,6 +48,7 @@ a {
         }
     }
 
+    // Styles for buttons within the cart
     & button {
         background: none;
         border: none;
@@ -53,10 +59,10 @@ a {
             width: 40px;
             height: auto;
             margin-left: 16rem;
-
         }
     }
 
+    // Styles for the cart summary section
     &-summary {
         cursor: pointer;
         display: flex;
@@ -72,11 +78,13 @@ a {
         font-family: "Bungee-Spice";
     }
 
+    // Styles for individual cart items
     &-item {
         display: flex;
         align-items: center;
         margin: 10px 0;
 
+        // Styles for details of each cart item
         &-details {
             flex-grow: 1;
             display: flex;
@@ -95,9 +103,10 @@ a {
     }
 }
 
+// Styles for the payment button
 .pay-button {
     font-family: "Bubblegum-Sans";
-    color: red; 
+    color: red;
     border: none;
     border-radius: 1rem;
     cursor: pointer;
@@ -106,17 +115,17 @@ a {
     margin-bottom: -2.6rem;
     padding: 0.5rem 1rem;
     display: inline-block;
-    text-align: center; 
-    text-transform: uppercase; 
-    transition: background-color 0.3s ease-in-out; 
-  }
-  
-  .pay-button:hover {
-    background-color: #0056b3; 
-  }
-  
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease-in-out;
+}
 
+// Hover effect for the payment button
+.pay-button:hover {
+    background-color: #0056b3;
+}
 
+// Styles for the shop items container
 .shop-items {
     display: flex;
     flex-wrap: wrap;
@@ -127,6 +136,7 @@ a {
     font-family: "Bubblegum-Sans";
 }
 
+// Styles for individual shop items
 .item {
     text-align: center;
     border: .1rem solid blue;
@@ -150,15 +160,17 @@ a {
         margin: 0;
     }
 
+    // Styles for the "Add to Cart" button
     & button {
         background-color: #007bff;
-        color: orange;
+        font-family: "Bungee-Spice";
         border: none;
         border-radius: 1rem;
         padding: 5px 10px;
         cursor: pointer;
         font-size: 0.9rem;
 
+        // Hover effect for the "Add to Cart" button
         &:hover {
             background-color: green;
         }

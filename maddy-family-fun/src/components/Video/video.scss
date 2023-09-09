@@ -1,84 +1,111 @@
+// Import font and mixin styles
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/mixins" as *;
 
+// Apply styles to all elements
 * {
     margin: 0;
 }
 
+// Styles for the video page
 .video {
+    // Set background image for mobile devices
     background: url(../../assets/images/Video_Mobile.jpg);
+
+    // Media query for tablets
     @include tablet {
+        // Change background image for tablets
         background: url(../../assets/images/Video.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
     }
-   
+
+    // Styles for the video container
     &-videos {
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding: 2rem;
     }
+
+    // Styles for each video item
     &-item {
         margin: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-  }
-  
-  .video-item {
+}
+
+// Styles for video items
+.video-item {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    // Media query for desktops
     @include desktop {
         flex-direction: row;
         justify-content: space-evenly;
     }
 
-    &-title{
+    // Styles for video title
+    &-title {
         font-family: "Bungee-Spice";
         display: flex;
         justify-content: center;
         padding: 1rem;
+
+        // Media query for tablets
         @include tablet {
             font-size: 1.5rem;
         }
+
+        // Media query for desktops
         @include desktop {
             display: flex;
             flex-direction: column;
         }
-
     }
+
+    // Styles for video iframe
     &-iframe {
         border-radius: 1rem;
         max-width: 30rem;
         display: flex;
         justify-content: center;
         align-self: center;
+
+        // Media query for tablets
         @include tablet {
             max-width: 40rem;
         }
+
+        // Media query for desktops
         @include desktop {
             width: 50rem;
             margin: 2rem;
         }
-
     }
+
+    // Styles for video description
     &-description {
         font-family: "Bubblegum-Sans";
         text-align: center;
         padding: 1rem;
         color: blue;
+
+        // Media query for tablets
         @include tablet {
             font-size: 1.5rem;
         }
+
+        // Media query for desktops
         @include desktop {
             width: 30rem;
             align-self: center;
         }
     }
-  }
-  
+}
   
