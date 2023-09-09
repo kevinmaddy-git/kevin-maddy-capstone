@@ -56,7 +56,7 @@ const About = () => {
             <li
               key={person.id}
               onClick={() => handlePersonClick(person.id)}
-              className="about-name"
+              className={`about-name ${selectedPersonId === person.id ? 'active' : ''}`}
             >
               {person.name}
             </li>
