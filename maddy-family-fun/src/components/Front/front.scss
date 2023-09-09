@@ -1,6 +1,7 @@
-// Import font and mixins partials
+// Import partials
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 
 // Define styles for the .front-container class
 .front-container {
@@ -33,7 +34,7 @@
 .title {
   font-size: 4rem;
   margin: 1rem 0;
-  color: orange;
+  color: $family-fun-orange;
 }
 
 // Define styles for the .image class
@@ -60,7 +61,7 @@
 .description {
   margin: 0 2rem;
   font-size: 1rem;
-  color: purple;
+  color: $family-fun-purple;
 
   // Media query for tablet screens
   @include tablet {
