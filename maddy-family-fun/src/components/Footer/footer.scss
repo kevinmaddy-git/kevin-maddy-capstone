@@ -1,22 +1,26 @@
+// Import font and mixins partials
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/mixins" as *;
 
+// Reset margins for all elements
 * {
-    margin: 0;
+  margin: 0;
 }
 
+// Styling for the footer section
 .footer {
+  display: flex;
+  justify-content: center;
+  background-image: url(../../assets/images/Header.jpg);
+  height: 10rem;
+  margin: 0;
+
+  // Styling for the content within the footer
+  &-content {
+    font-family: "Bungee-Spice";
+    font-size: 2rem;
     display: flex;
     justify-content: center;
-    background-image: url(../../assets/images/Header.jpg);
-    height: 10rem;
-    margin: 0;
-
-    &-content {
-        font-family: "Bungee-Spice";
-        font-size: 2rem;
-        display: flex;
-        justify-content: center;
-        align-self: center;
-    }
+    align-self: center;
+  }
 }

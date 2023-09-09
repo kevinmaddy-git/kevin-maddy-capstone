@@ -10,9 +10,16 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-        <Route path="/home" element={<FrontPage />} />
+          {/* Route for the "Home" page */}
+          <Route path="/home" element={<FrontPage />} />
+
+          {/* Route for the "About" page */}
           <Route path="/about" element={<AboutPage />} />
+
+          {/* Route for the "Video" page */}
           <Route path="/video" element={<VideoPage />} />
+
+          {/* Route for the "Shop" page */}
           <Route path="/shop" element={<ShopPage />} />
         </Routes>
       </div>
@@ -21,3 +28,4 @@ function App() {
 }
 
 export default App;
+

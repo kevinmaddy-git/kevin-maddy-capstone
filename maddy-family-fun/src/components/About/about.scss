@@ -1,115 +1,131 @@
+// Import font and mixins partials
 @use "../../styles/partials/fonts.scss" as *;
 @use "../../styles/partials/mixins" as *;
 
+// Reset margins for all elements
 * {
-    margin: 0;
+  margin: 0;
 }
 
+// Styling for the 'about' section
 .about {
+  height: 60rem;
+  background-image: url(../../assets/images/About_Mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Bubblegum-Sans";
+
+  // Media query for tablet screens
+  @include tablet {
     height: 60rem;
-    background-image: url(../../assets/images/About_Mobile.jpg);
+    background-image: url(../../assets/images/About.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
     background-attachment: fixed;
-    font-family: "Bubblegum-Sans";
+  }
 
-    @include tablet {
-        height: 60rem;
-        background-image: url(../../assets/images/About.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-    }
+  // Styling for the title
+  &-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    color: blue;
+  }
 
-    &-title {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-        padding-top: 2rem;
-        display: flex;
-        justify-content: center;
-        color: blue;
-    }
+  // Styling for the list of names
+  &-names {
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
 
-    &-names {
-        ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
+      // Styling for individual names
+      .about-name {
+        cursor: pointer;
+        color: orangered;
+        font-size: 1.5rem;
+        margin: 0.5rem 0;
+        transition: color 0.3s;
 
-            .about-name {
-                cursor: pointer;
-                color: orangered;
-                font-size: 1.5rem;
-                margin: 0.5rem 0;
-                transition: color 0.3s;
-
-                &:hover {
-                    color: #007bff;
-                }
-            }
+        // Hover effect for names
+        &:hover {
+          color: #007bff;
         }
+      }
     }
+  }
 
-    .selected-person {
-        margin-top: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+  // Styling for the selected person's section
+  .selected-person {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-        &-name {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: orange;
-            animation: rotateName .5s ease-in 1;
-            transform-origin: center;
+    // Styling for the selected person's name
+    &-name {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: orange;
 
-            @keyframes rotateName {
-                0% {
-                    transform: rotate(0deg);
-                }
+      // Animation for name rotation
+      animation: rotateName 0.5s ease-in 1;
+      transform-origin: center;
 
-                100% {
-                    transform: rotate(360deg);
-                }
-            }
+      @keyframes rotateName {
+        0% {
+          transform: rotate(0deg);
         }
 
-        &-image {
-            max-width: 20rem;
-            max-height: 25rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 1rem;
-            animation: rotateImage .5s ease-in 1;
-            transform-origin: center;
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
 
-            @keyframes rotateImage {
-                0% {
-                    transform: rotate(0deg);
-                }
+    // Styling for the selected person's image
+    &-image {
+      max-width: 20rem;
+      max-height: 25rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 1rem;
 
-                100% {
-                    transform: rotate(-360deg);
-                }
-            }
+      // Animation for image rotation
+      animation: rotateImage 0.5s ease-in 1;
+      transform-origin: center;
+
+      @keyframes rotateImage {
+        0% {
+          transform: rotate(0deg);
         }
 
+        100% {
+          transform: rotate(-360deg);
+        }
+      }
+    }
+
+    // Styling for the selected person's description
     &-description {
-        font-size: 1.3rem;
-        margin: 1rem 2rem;
-        color: purple;
-        transition: opacity 3s ease-in;
+      font-size: 1.3rem;
+      margin: 1rem 2rem;
+      color: purple;
 
-        @include tablet {
-            font-size: 1.5rem;
-        }
+      // Media query for tablet and desktop screens
+      @include tablet {
+        font-size: 1.5rem;
+      }
 
-        @include desktop {
-            font-size: 2rem;
-        }
+      @include desktop {
+        font-size: 2rem;
+      }
     }
-}
+  }
 }
